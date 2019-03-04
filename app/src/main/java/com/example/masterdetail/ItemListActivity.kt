@@ -97,8 +97,8 @@ class ItemListActivity : AppCompatActivity() {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = values[position]
-            holder.idView.text = item.title
-            holder.contentView.text = item.resumen
+            holder.idView.text = item.id
+            holder.contentView.text = item.title
 
             with(holder.itemView) {
                 tag = item
