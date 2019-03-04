@@ -20,8 +20,8 @@ import kotlinx.android.synthetic.main.item_list.*
  * has different presentations for handset and tablet-size devices. On
  * handsets, the activity presents a list of items, which when touched,
  * lead to a [ItemDetailActivity] representing
- * item details. On tablets, the activity presents the list of items and
- * item details side-by-side using two vertical panes.
+ * item RESUMEN. On tablets, the activity presents the list of items and
+ * item RESUMEN side-by-side using two vertical panes.
  */
 class ItemListActivity : AppCompatActivity() {
 
@@ -97,8 +97,8 @@ class ItemListActivity : AppCompatActivity() {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = values[position]
-            holder.idView.text = item.id
-            holder.contentView.text = item.content
+            holder.idView.text = item.title
+            holder.contentView.text = item.resumen
 
             with(holder.itemView) {
                 tag = item
