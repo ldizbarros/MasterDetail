@@ -2,6 +2,7 @@ package com.example.masterdetail
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,7 +47,7 @@ class ItemDetailFragment : Fragment() {
 
         // Show the dummy TITLE as text in a TextView.
         item?.let {
-            rootView.item_detail.text = it.resumen
+            rootView.item_detail.text = Html.fromHtml(it.resumen)
         }
 
         return rootView
